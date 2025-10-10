@@ -1,3 +1,9 @@
+# 中小学C++编程练习题库 - Git忽略配置
+
+# ============================================
+# 编译产物 (Compiled artifacts)
+# ============================================
+
 # Prerequisites
 *.d
 
@@ -37,5 +43,176 @@
 *.out
 *.app
 
-# debug information files
+# Debug information files
 *.dwo
+
+# ============================================
+# 项目特定文件 (Project specific)
+# ============================================
+
+# 构建目录
+build/
+Build/
+BUILD/
+
+# 临时执行文件 (避免学生意外提交编译后的程序)
+examples/hello_world
+examples/basic_variables
+examples/hello
+examples/test
+
+# 练习题编译产物
+exercises/*/hello*
+exercises/*/test*
+exercises/*/solution*
+exercises/*/*/*.exe
+exercises/*/*/*.out
+
+# 参考答案编译产物 (只忽略可执行文件，保留.cpp源代码)
+solutions/*/hello
+solutions/*/test
+solutions/*/*/hello*
+solutions/*/*/test*
+solutions/*/*/*.exe
+solutions/*/*/*.out
+solutions/*/*.exe
+solutions/*/*.out
+
+# 工具编译产物
+tools/build
+tools/test
+tools/compile
+
+# ============================================
+# 开发环境文件 (Development environment)
+# ============================================
+
+# Visual Studio (不忽略.vscode/以保留项目配置)
+.vs/
+
+# Dev-C++
+*.dev
+*.layout
+*.depend
+
+# Code::Blocks
+*.cbp
+*.layout
+*.depend
+*.workspace
+
+# CLion
+.idea/
+cmake-build-*/
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+
+# ============================================
+# 操作系统文件 (OS generated files)
+# ============================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# Linux
+*~
+.nfs*
+
+# ============================================
+# 临时文件 (Temporary files)
+# ============================================
+
+# 编辑器临时文件
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# 备份文件
+*.bak
+*.backup
+*.orig
+
+# 日志文件
+*.log
+
+# ============================================
+# 学生作业相关 (Student work related)
+# ============================================
+
+# 学生提交的作业文件夹（如果需要的话）
+student_work/
+submissions/
+homework/
+
+# 临时测试文件
+test_*.cpp
+temp_*.cpp
+my_*.cpp
+
+# 输出重定向文件
+output.txt
+result.txt
+my_output.txt
+
+# ============================================
+# 文档编译产物 (Documentation artifacts)
+# ============================================
+
+# LaTeX
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+
+# Markdown to PDF
+*.pdf
+
+# ============================================
+# 网络和缓存 (Network and cache)
+# ============================================
+
+# 包管理器
+node_modules/
+.npm/
+
+# 缓存文件
+.cache/
+*.cache
+
+# ============================================
+# 注释说明
+# ============================================
+
+# 这个.gitignore文件专门为中小学C++编程练习题库设计
+# 主要目的：
+# 1. 忽略所有编译产物，确保代码仓库只包含源代码
+# 2. 保留VSCode配置文件，提供统一的开发环境
+# 3. 忽略学生练习时可能产生的临时文件
+# 4. 保持仓库整洁，便于学习和教学
+#
+# 特别说明：
+# - .vscode/ 目录不被忽略，以确保所有用户获得一致的编程环境
+# - 编译产物(build/, bin/中的可执行文件)被忽略，但目录结构保留
+# - 学生的临时练习文件被忽略，避免意外提交
+
+# ================================
+# AI Dev Tools 自动生成文件
+# ================================
+ai-dev-reports/
+.ai-dev-cache/

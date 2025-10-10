@@ -1,0 +1,137 @@
+{
+    // 中小学C++编程练习题库 - VSCode工作区设置
+    // 优化编程学习体验的配置
+
+    // ===== 文件和编辑器设置 =====
+    "files.encoding": "utf8",
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.associations": {
+        "*.cpp": "cpp",
+        "*.hpp": "cpp",
+        "*.h": "cpp"
+    },
+
+    // ===== C/C++特定设置 =====
+    "C_Cpp.default.cppStandard": "c++11",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.autocomplete": "default",
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 100 }",
+
+    // ===== 编辑器外观和行为 =====
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'Source Code Pro', 'Fira Code', 'Consolas', 'Monaco', monospace",
+    "editor.lineNumbers": "on",
+    "editor.rulers": [80, 100],
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+
+    // ===== 代码智能提示 =====
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.parameterHints.enabled": true,
+    "editor.hover.enabled": true,
+
+    // ===== 终端设置 =====
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontFamily": "'Source Code Pro', 'Consolas', monospace",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.cwd": "${workspaceFolder}",
+
+    // ===== 文件资源管理器 =====
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.sortOrder": "type",
+
+    // ===== 搜索设置 =====
+    "search.exclude": {
+        "**/build": true,
+        "**/bin": true,
+        "**/.git": true,
+        "**/.vscode": false,
+        "**/node_modules": true
+    },
+
+    // ===== 工作区特定设置 =====
+    "git.ignoreLimitWarning": true,
+    "extensions.ignoreRecommendations": false,
+
+    // ===== 调试设置 =====
+    "debug.console.fontSize": 13,
+    "debug.internalConsoleOptions": "openOnSessionStart",
+    "debug.terminal.clearBeforeReusing": true,
+
+    // ===== 问题面板设置 =====
+    "problems.showCurrentInStatus": true,
+    "problems.sortOrder": "severity",
+
+    // ===== 教学友好设置 =====
+    "workbench.startupEditor": "readme",
+    "workbench.tips.enabled": true,
+
+    // ===== 自动保存和格式化 =====
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2000,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": true,
+
+    // ===== 错误和警告显示 =====
+    "editor.showUnused": true,
+    "editor.showDeprecated": true,
+    "problems.decorations.enabled": true,
+
+    // ===== 项目推荐扩展 =====
+    "extensions.recommendations": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "formulahendry.code-runner",
+        "ms-vscode.hexeditor",
+        "streetsidesoftware.code-spell-checker"
+    ],
+
+    // ===== Code Runner设置 =====
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.preserveFocus": false,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ -std=c++11 -Wall -g $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt"
+    },
+
+    // ===== 学习辅助设置 =====
+    "editor.lightbulb.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "editor.inlineSuggest.enabled": true,
+
+    // ===== 版本控制设置 =====
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "scm.diffDecorations": "all",
+
+    // ===== 性能设置 =====
+    "search.followSymlinks": false,
+    "files.watcherExclude": {
+        "**/build/**": true,
+        "**/bin/**": true,
+        "**/.git/objects/**": true
+    }
+}

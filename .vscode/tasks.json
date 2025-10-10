@@ -1,0 +1,269 @@
+{
+    // 中小学C++编程练习题库 - VSCode编译任务配置
+    // 支持各种C++程序的编译任务
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "编译当前C++文件",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++11",
+                "-Wall",
+                "-g",
+                "-o",
+                "${workspaceFolder}/build/${fileBasenameNoExtension}",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "清理旧文件并编译当前打开的C++文件到build目录",
+            "dependsOn": ["清理当前文件编译产物", "创建构建目录"]
+        },
+        {
+            "label": "编译示例程序",
+            "type": "shell",
+            "command": "make",
+            "args": ["examples"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "编译所有示例程序 (hello_world, basic_variables)"
+        },
+        {
+            "label": "编译参考答案",
+            "type": "shell",
+            "command": "make",
+            "args": ["solutions"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "编译所有练习题参考答案"
+        },
+        {
+            "label": "编译项目工具",
+            "type": "shell",
+            "command": "make",
+            "args": ["build-tools"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "编译项目工具 (build, project_check)"
+        },
+        {
+            "label": "创建构建目录",
+            "type": "shell",
+            "command": "mkdir",
+            "args": ["-p", "${workspaceFolder}/build"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "detail": "创建build目录用于存放编译产物"
+        },
+        {
+            "label": "运行当前程序",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "detail": "运行当前编译的程序",
+            "dependsOn": "编译当前C++文件"
+        },
+        {
+            "label": "测试练习题01",
+            "type": "shell",
+            "command": "make",
+            "args": ["test-solution-01"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "detail": "测试练习题01 - Hello World"
+        },
+        {
+            "label": "测试练习题02",
+            "type": "shell",
+            "command": "make",
+            "args": ["test-solution-02"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "detail": "测试练习题02 - 基础变量"
+        },
+        {
+            "label": "测试练习题03",
+            "type": "shell",
+            "command": "make",
+            "args": ["test-solution-03"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "detail": "测试练习题03 - 简单计算器"
+        },
+        {
+            "label": "运行项目完整性检查",
+            "type": "shell",
+            "command": "make",
+            "args": ["check-project"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "detail": "运行项目完整性检查工具"
+        },
+        {
+            "label": "清理编译文件",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "detail": "清理所有编译产物"
+        },
+        {
+            "label": "全面测试项目",
+            "type": "shell",
+            "command": "make",
+            "args": ["test-all"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "detail": "运行所有编译和测试任务"
+        },
+        {
+            "label": "检查编译环境",
+            "type": "shell",
+            "command": "make",
+            "args": ["check-env"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "detail": "检查C++编译环境是否正确配置"
+        },
+        {
+            "label": "显示帮助信息",
+            "type": "shell",
+            "command": "make",
+            "args": ["help"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "detail": "显示所有可用的make命令"
+        },
+        {
+            "label": "清理当前文件编译产物",
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                "-f",
+                "${workspaceFolder}/build/${fileBasenameNoExtension}",
+                "${workspaceFolder}/build/${fileBasenameNoExtension}.exe"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "detail": "清理当前文件对应的编译产物",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+}
