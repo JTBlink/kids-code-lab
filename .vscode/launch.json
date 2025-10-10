@@ -4,6 +4,19 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "运行当前C++文件",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "preLaunchTask": "编译当前C++文件",
+            "console": "externalTerminal"
+        },
+        {
             "name": "调试当前C++文件",
             "type": "cppdbg",
             "request": "launch",
