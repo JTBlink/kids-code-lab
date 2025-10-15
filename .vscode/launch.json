@@ -14,7 +14,16 @@
             "environment": [],
             "externalConsole": true,
             "preLaunchTask": "编译当前C++文件",
-            "console": "externalTerminal"
+            "MIMode": "gdb",
+            "MIDebuggerPath": "/usr/bin/gdb",
+            "osx": {
+                "externalConsole": true,
+                "MIMode": "lldb"
+            },
+            "linux": {
+                "externalConsole": false,
+                "MIMode": "gdb"
+            }
         },
         {
             "name": "调试当前C++文件",
@@ -24,10 +33,16 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:/usr/local/bin"
+                }
+            ],
+            "console": "integratedTerminal",
             "preLaunchTask": "编译当前C++文件",
+            "MIMode": "gdb",
+            "MIDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
@@ -39,7 +54,26 @@
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "osx": {
+                "MIMode": "lldb",
+                "setupCommands": []
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "为 gdb 启用整齐打印",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    },
+                    {
+                        "description": "将反汇编风格设置为 Intel",
+                        "text": "-gdb-set disassembly-flavor intel",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
         },
         {
             "name": "调试Hello World示例",
@@ -49,17 +83,37 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:/usr/local/bin"
+                }
+            ],
+            "console": "integratedTerminal",
             "preLaunchTask": "编译示例程序",
+            "MIMode": "gdb",
+            "MIDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "osx": {
+                "MIMode": "lldb",
+                "setupCommands": []
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "为 gdb 启用整齐打印",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
         },
         {
             "name": "调试变量示例",
@@ -69,17 +123,37 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:/usr/local/bin"
+                }
+            ],
+            "console": "integratedTerminal",
             "preLaunchTask": "编译示例程序",
+            "MIMode": "gdb",
+            "MIDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "osx": {
+                "MIMode": "lldb",
+                "setupCommands": []
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "为 gdb 启用整齐打印",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
         },
         {
             "name": "调试练习题01参考答案",
@@ -89,17 +163,37 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:/usr/local/bin"
+                }
+            ],
+            "console": "integratedTerminal",
             "preLaunchTask": "编译参考答案",
+            "MIMode": "gdb",
+            "MIDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "osx": {
+                "MIMode": "lldb",
+                "setupCommands": []
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "为 gdb 启用整齐打印",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
         },
         {
             "name": "调试练习题02参考答案",
@@ -109,17 +203,37 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:/usr/local/bin"
+                }
+            ],
+            "console": "integratedTerminal",
             "preLaunchTask": "编译参考答案",
+            "MIMode": "gdb",
+            "MIDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "osx": {
+                "MIMode": "lldb",
+                "setupCommands": []
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "为 gdb 启用整齐打印",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
         },
         {
             "name": "调试练习题03参考答案",
@@ -129,17 +243,37 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:/usr/local/bin"
+                }
+            ],
+            "console": "integratedTerminal",
             "preLaunchTask": "编译参考答案",
+            "MIMode": "gdb",
+            "MIDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "osx": {
+                "MIMode": "lldb",
+                "setupCommands": []
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "为 gdb 启用整齐打印",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
         },
         {
             "name": "调试编译工具",
@@ -149,17 +283,37 @@
             "args": ["help"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:/usr/local/bin"
+                }
+            ],
+            "console": "integratedTerminal",
             "preLaunchTask": "编译项目工具",
+            "MIMode": "gdb",
+            "MIDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "osx": {
+                "MIMode": "lldb",
+                "setupCommands": []
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "为 gdb 启用整齐打印",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
         },
         {
             "name": "调试项目检查工具",
@@ -169,17 +323,37 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:/usr/local/bin"
+                }
+            ],
+            "console": "integratedTerminal",
             "preLaunchTask": "编译项目工具",
+            "MIMode": "gdb",
+            "MIDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "osx": {
+                "MIMode": "lldb",
+                "setupCommands": []
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "为 gdb 启用整齐打印",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
         }
     ]
 }

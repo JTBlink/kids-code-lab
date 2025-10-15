@@ -9,9 +9,20 @@ using namespace std;
 
 int main() {
     // 输出欢迎信息
-    cout << "Hello, World!" << endl;
-    cout << "欢迎来到C++编程世界！" << endl;
-    
+    cout << "大家好!" << endl;
+    cout << "我叫Shawn！" << endl;
+    cout << "我今年10岁!" << endl;
+    cout << "我来自中国北京市！" << endl;
+    cout << "我喜欢编程!" << endl;
+    cout << "我喜欢打篮球!" << endl;
+    cout << "我喜欢看书!" << endl;
+    cout << "我喜欢旅游!" << endl;
+    cout << "我喜欢架子鼓!" << endl;
+    cout << "我喜欢美食!" << endl;
+    cout << "我喜欢动物!" << endl;
+    cout << "我喜欢自然!" << endl;
+    cout << "我喜欢科技!" << endl;
+    cout << "我喜欢艺术!" << endl;
     // 程序正常结束
     return 0;
 }
