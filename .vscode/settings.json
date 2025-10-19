@@ -14,7 +14,8 @@
     "*.cpp": "cpp",
     "*.hpp": "cpp",
     "*.h": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "iostream": "cpp"
 },
 
   // ===== C/C++特定设置 =====
