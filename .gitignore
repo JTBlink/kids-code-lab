@@ -181,7 +181,7 @@ my_output.txt
 *.toc
 
 # Markdown to PDF
-*.pdf
+# *.pdf
 
 # ============================================
 # 网络和缓存 (Network and cache)
